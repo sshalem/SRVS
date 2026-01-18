@@ -1,7 +1,7 @@
 import { NavLink, useLocation } from "react-router-dom";
 import { links } from "../utils/links";
 import { useEffect, useRef, useState } from "react";
-import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
+import { FaAngleLeft, FaAngleRight, FaLock } from "react-icons/fa";
 
 // https://medium.com/@rexosariemen/implementing-horizontal-scroll-buttons-in-react-61e0bb431be
 
@@ -136,8 +136,28 @@ const Navbar = () => {
   }, []);
 
   return (
-    <section className="top-nav-font fixed top-0 h-[53px] w-full select-none border-2 border-red-500 bg-[#0f238c] text-[13px] uppercase tracking-wider text-white">
-      <nav className="fixed left-0 right-0 top-0 z-[3] ml-auto h-[53px] w-full max-w-[1750px] border-2 border-green-400 align-middle">
+    <section className="top-nav-font fixed top-0 h-[53px] w-full select-none bg-[#0f238c] text-[13px] uppercase tracking-wider text-white">
+      {/* Start Logo */}
+      <section className="absolute">
+        <article className="logo-main">
+          <div className="logo-parent">
+            <div className="logo-asml"></div>
+            <div className="logo-VRSS">VRSS</div>
+          </div>
+          <div className="logo-parent">
+            <div className="logo-cci">
+              <div className="logo-cci-internal">
+                <FaLock style={{ padding: "0" }} />
+              </div>
+              <div>CCI</div>
+            </div>
+            <div className="logo-version">2.4.0</div>
+          </div>
+          <div className="logo-seperator-parent"></div>
+        </article>
+      </section>
+      {/* End Logo */}
+      <nav className="fixed left-0 right-0 top-0 z-[3] ml-auto h-[53px] w-full max-w-[1750px] border-2 border-green-500 align-middle">
         {/* left Scroll button */}
 
         {showScrollIcons
@@ -153,7 +173,7 @@ const Navbar = () => {
             )
           : ""}
 
-        <div className="ml-14 flex h-[53px] overflow-hidden sm:ml-14 md:ml-0 lg:ml-0" ref={navRef}>
+        <div className="ml-32 flex h-[53px] overflow-hidden sm:ml-32 md:ml-32 lg:ml-32" ref={navRef}>
           {links.map((subject, index) => {
             // console.log(location);
             let splitPathname: string[] = location.pathname.split("/");
