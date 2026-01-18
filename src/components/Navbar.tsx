@@ -79,9 +79,9 @@ const Navbar = () => {
       // console.log(navRef);
       // console.log("");
 
-      // console.log(window.innerWidth + " - window innerWidth");
-      // console.log(navRef.current?.clientWidth + " - clientWidth");
-      // console.log(navRef.current?.scrollWidth + " - scrollWidth");
+      console.log(window.innerWidth + " - window innerWidth");
+      console.log(navRef.current?.clientWidth + " - clientWidth");
+      console.log(navRef.current?.scrollWidth + " - scrollWidth");
 
       // I store in session storage the `showScrollIcons`
       // beacuse , If i go to unkonwn url , I land on the error page
@@ -89,14 +89,14 @@ const Navbar = () => {
       // But I loose the state of `showScrollIcons`
       // Thus , I keep the state of `showScrollIcons` in sessionStorage
       if (navRef.current !== null) {
-        // But, here , If I have links in the navabar that , eventually tkaes width more than 1750px,
+        // But, here , If I have links in the navabar that , eventually takes width more than 1750px,
         // thus, I want always to show the scroll buttons
         // since I set the max-w -[1750px] ,
         // thus If scrollWidth > 1750 always show the scroll bars
-        if (navRef.current.scrollWidth > 1750) {
-          sessionStorage.setItem("showScrollIcons", "true");
-          setShowScrollIcons(true);
-        } else if (navRef.current.scrollWidth - window.innerWidth > 0) {
+        if (navRef.current.scrollWidth > 1550) {
+          sessionStorage.setItem("showScrollIcons", "false");
+          setShowScrollIcons(false);
+        } else if (navRef.current.scrollWidth - navRef.current?.clientWidth > 0) {
           sessionStorage.setItem("showScrollIcons", "true");
           setShowScrollIcons(true);
         } else {
@@ -122,7 +122,7 @@ const Navbar = () => {
     } else {
       if (navRef.current !== null) {
         // I want to show the scrollbar
-        // If I open broweser and window Wisth is navRef.current.scrollWidth - window.innerWidth > 0
+        // If I open broweser and window Width is navRef.current.scrollWidth - window.innerWidth > 0
         if (navRef.current.scrollWidth - window.innerWidth > 0) {
           setShowScrollIcons(true);
         }
@@ -157,13 +157,13 @@ const Navbar = () => {
         </article>
       </section>
       {/* End Logo */}
-      <nav className="fixed left-0 right-0 top-0 z-[3] ml-auto h-[53px] w-full max-w-[1750px] border-2 border-green-500 align-middle">
+      <nav className="fixed left-0 top-0 z-[3] ml-auto h-[53px] w-full max-w-[1750px] align-middle">
         {/* left Scroll button */}
 
         {showScrollIcons
           ? enableLeftScrolling && (
               <button
-                className="css-blur-bg-left absolute left-14 top-0 h-[53px] w-10 bg-slate-400 px-3 hover:bg-blue-500 sm:left-12 md:left-0"
+                className="css-blur-bg-left absolute left-32 top-0 h-[53px] w-10 bg-slate-400 px-3 hover:bg-blue-500 sm:left-32 md:left-32"
                 onMouseDown={startLeftScroll}
                 onMouseUp={stopLeftScroll}
                 onMouseLeave={stopLeftScroll}
@@ -173,7 +173,7 @@ const Navbar = () => {
             )
           : ""}
 
-        <div className="ml-32 flex h-[53px] overflow-hidden sm:ml-32 md:ml-32 lg:ml-32" ref={navRef}>
+        <div className="ml-32 flex h-[53px] overflow-hidden border-2" ref={navRef}>
           {links.map((subject, index) => {
             // console.log(location);
             let splitPathname: string[] = location.pathname.split("/");
