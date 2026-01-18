@@ -47,7 +47,7 @@ const Spring_page = () => {
   return (
     <GridLayout>
       <FaBars className="css-fa-bars" onClick={toggleSideNavbar} />
-      {showSidebar && (
+      {/* {showSidebar && (
         <article className="fixed bottom-0 top-[89px] z-50 w-64 overflow-auto bg-[#E7E9EB]">
           <div className="relative h-full w-full">
             <div className="h-3"></div>
@@ -70,8 +70,31 @@ const Spring_page = () => {
             <D16_DropDownInterviewQuestions />
           </div>
         </article>
+      )} */}
+      {showSidebar && (
+        <article className="fixed bottom-0 top-[55px] z-50 w-64 overflow-auto bg-[#e7e9eb]">
+          <div className="relative h-full w-full">
+            <div className="h-3"></div>
+            <SideBarLink pageName="Spring Home" internalLink="/spring" />
+            <D1_DropDownIDE />
+            <D2_DropDownApplicationProperties />
+            <D3_DropDownLogging />
+            <D4_DropDownJpa />
+            <D5_DropDownAudit />
+            <D6_DropDownExceptionHandling />
+            <D7_DropDownRest />
+            <D8_DropDownSecurity />
+            <D9_DropDownAop />
+            <D10_DropDownTransactionManagement />
+            <D11_DropDownSpringBatch />
+            <D12_DropDownCaching />
+            <D13_DropDownSpringIO />
+            <D14_DropDownJUnit />
+            <D15_DropDownJenkins />
+            <D16_DropDownInterviewQuestions />
+          </div>
+        </article>
       )}
-
       <main className="css-main-outlet">
         <Outlet />
       </main>

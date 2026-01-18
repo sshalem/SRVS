@@ -136,8 +136,8 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className="top-nav-font fixed top-0 h-[53px] w-full select-none bg-[#0f238c] text-[13px] uppercase tracking-wider text-white">
-      <nav className="fixed left-0 right-0 top-0 z-[3] m-auto h-[53px] w-full max-w-[1750px] align-middle">
+    <section className="top-nav-font fixed top-0 h-[53px] w-full select-none border-2 border-red-500 bg-[#0f238c] text-[13px] uppercase tracking-wider text-white">
+      <nav className="fixed left-0 right-0 top-0 z-[3] ml-auto h-[53px] w-full max-w-[1750px] border-2 border-green-400 align-middle">
         {/* left Scroll button */}
 
         {showScrollIcons
@@ -182,7 +182,7 @@ const Navbar = () => {
             )
           : ""}
       </nav>
-    </div>
+    </section>
   );
 };
 
