@@ -1,7 +1,8 @@
-import { NavLink, useLocation, useNavigate } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { links } from "../utils/links";
 import { useEffect, useRef, useState } from "react";
-import { FaAngleLeft, FaAngleRight, FaLock } from "react-icons/fa";
+import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
+import ASML_LOGO from "./ASML_LOGO";
 
 // https://medium.com/@rexosariemen/implementing-horizontal-scroll-buttons-in-react-61e0bb431be
 
@@ -13,7 +14,6 @@ const Navbar = () => {
   // const intervalRef = useRef<number | null>(null);
 
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
-  const navigate = useNavigate();
 
   let location = useLocation();
 
@@ -139,26 +139,7 @@ const Navbar = () => {
   return (
     <section className="top-nav-font fixed top-0 h-[53px] w-full select-none bg-[#0f238c] text-[13px] uppercase tracking-wider text-white">
       {/* Start Logo */}
-      {/* <section className="absolute z-50 w-fit cursor-pointer" onClick={() => navigate("/")}> */}
-      <section className="absolute">
-        <article className="logo-main">
-          <div className="logo-parent z-50 w-fit cursor-pointer" onClick={() => navigate("/")}>
-            <div className="logo-asml"></div>
-            <div className="logo-VRSS">VRSS</div>
-          </div>
-          <div className="logo-parent">
-            <div className="logo-cci">
-              <div className="logo-cci-internal">
-                <FaLock style={{ padding: "0" }} />
-              </div>
-              <div>CCI</div>
-            </div>
-            <div className="logo-version">2.4.0</div>
-          </div>
-          <div className="logo-seperator-parent"></div>
-        </article>
-      </section>
-
+      <ASML_LOGO />
       {/* End Logo */}
 
       <nav className="fixed left-0 top-0 z-[3] ml-auto h-[53px] w-full max-w-[1750px] align-middle">
