@@ -3,7 +3,7 @@
 
 */
 import { Outlet } from "react-router-dom";
-import { AsideWrapperLayout, GridLayout, SideBarLink } from "../../components";
+import { AsideWrapperLayout, FlexLayout, SideBarLink } from "../../components";
 import { FaBars } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import DropDownEureka from "./DropMicroService/DropDownEureka";
@@ -35,7 +35,7 @@ const MicroServices_page = () => {
   }, []);
 
   return (
-    <GridLayout>
+    <FlexLayout>
       <FaBars className="css-fa-bars" onClick={toggleSideNavbar} />
 
       {showSidebar && (
@@ -53,7 +53,7 @@ const MicroServices_page = () => {
       <main className="css-main-outlet">
         <Outlet />
       </main>
-    </GridLayout>
+    </FlexLayout>
   );
 };
 

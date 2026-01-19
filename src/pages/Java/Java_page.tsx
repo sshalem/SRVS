@@ -3,7 +3,7 @@
 
 */
 import { Outlet } from "react-router-dom";
-import { AsideWrapperLayout, GridLayout, SideBarLink } from "../../components";
+import { AsideWrapperLayout, FlexLayout, SideBarLink } from "../../components";
 import { FaBars } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import J1_DropDownJavaBasics from "./DropJava/J1_DropDownJavaBasics";
@@ -35,7 +35,7 @@ const Java_page = () => {
   }, []);
 
   return (
-    <GridLayout>
+    <FlexLayout>
       <FaBars className="css-fa-bars" onClick={toggleSideNavbar} />
 
       {showSidebar && (
@@ -52,7 +52,7 @@ const Java_page = () => {
       <main className="css-main-outlet">
         <Outlet />
       </main>
-    </GridLayout>
+    </FlexLayout>
   );
 };
 
