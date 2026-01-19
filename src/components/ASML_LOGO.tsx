@@ -24,17 +24,17 @@ const ASML_LOGO = () => {
     <div>
       <section className="absolute">
         {/* <article className="logo-main"> 
-          <div className="logo-parent z-50 w-fit cursor-pointer" onClick={() => navigate("/")}>
-          */}
+                      <div className="logo-parent z-50 w-fit cursor-pointer" onClick={() => navigate("/")}>
+                      */}
         <article className="mx-3 my-0 flex px-0 py-2 caret-transparent">
-          <div className="w-14">
-            {showLOGO && (
-              <div className="z-50 mr-0 w-fit cursor-pointer p-1 text-white" onClick={() => navigate("/")}>
-                <div className="css-logo-asml"></div>
-                <div className="font- select-none py-[0.1rem] text-xs font-semibold italic">VRSS</div>
-              </div>
-            )}
-          </div>
+          {/* <div className="w-14"> */}
+          {showLOGO && (
+            <div className="z-50 mr-0 w-fit cursor-pointer p-1 text-white" onClick={() => navigate("/")}>
+              <div className="css-logo-asml"></div>
+              <div className="font- select-none py-[0.1rem] text-xs font-semibold italic">VRSS</div>
+            </div>
+          )}
+          {/* </div> */}
 
           <div className="mr-1 p-1 text-white">
             <div className="logo-cci">

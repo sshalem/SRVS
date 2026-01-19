@@ -140,6 +140,7 @@ const Navbar = () => {
     <section className="top-nav-font fixed top-0 h-[53px] w-full select-none bg-[#0f238c] text-[13px] uppercase tracking-wider text-white">
       {/* Start Logo */}
       <ASML_LOGO />
+
       {/* End Logo */}
 
       <nav className="fixed left-0 top-0 z-[3] ml-auto h-[53px] w-full max-w-[1750px] align-middle">
