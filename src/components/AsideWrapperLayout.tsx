@@ -1,6 +1,6 @@
 const AsideWrapperLayout = ({ children }: React.PropsWithChildren) => {
   return (
-    <aside className="fixed bottom-0 top-[55px] z-50 w-64 overflow-auto bg-[#deeeff]">
+    <aside className="fixed bottom-0 top-[55px] z-50 w-64 overflow-auto bg-[#dfefff]">
       <div className="relative h-full w-full">
         <div className="h-3"></div>
         {children}
@@ -10,3 +10,6 @@ const AsideWrapperLayout = ({ children }: React.PropsWithChildren) => {
 };
 
 export default AsideWrapperLayout;
+
+// bg-[#eff7ff]
+// bg-[#deeeff]
