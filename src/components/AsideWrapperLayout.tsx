@@ -1,0 +1,12 @@
+const AsideWrapperLayout = ({ children }: React.PropsWithChildren) => {
+  return (
+    <aside className="fixed bottom-0 top-[55px] z-50 w-64 overflow-auto bg-[#deeeff]">
+      <div className="relative h-full w-full">
+        <div className="h-3"></div>
+        {children}
+      </div>
+    </aside>
+  );
+};
+
+export default AsideWrapperLayout;

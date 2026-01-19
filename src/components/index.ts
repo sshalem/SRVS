@@ -1,6 +1,7 @@
 export { default as MainLayout } from "./MainLayout";
 export { default as TopNavbar } from "./home/TopNavbar";
 export { default as Navbar } from "./Navbar";
+export { default as AsideWrapperLayout } from "./AsideWrapperLayout";
 export { default as GridLayout } from "./ui/GridLayout";
 export { default as AboutMe } from "./home/AboutMe";
 export { default as MyProjects } from "./home/MyProjects";

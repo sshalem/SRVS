@@ -3,7 +3,7 @@
 
 */
 import { Outlet } from "react-router-dom";
-import { GridLayout, SideBarLink } from "../../components";
+import { AsideWrapperLayout, GridLayout, SideBarLink } from "../../components";
 import { FaBars } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import D1_DropDownIDE from "./DropSpringPage/D1_DropDownIDE";
@@ -48,28 +48,25 @@ const Spring_page = () => {
     <GridLayout>
       <FaBars className="css-fa-bars" onClick={toggleSideNavbar} />
       {showSidebar && (
-        <article className="fixed bottom-0 top-[55px] z-50 w-64 overflow-auto bg-[#e7e9eb]">
-          <div className="relative h-full w-full">
-            <div className="h-3"></div>
-            <SideBarLink pageName="Spring Home" internalLink="/spring" />
-            <D1_DropDownIDE />
-            <D2_DropDownApplicationProperties />
-            <D3_DropDownLogging />
-            <D4_DropDownJpa />
-            <D5_DropDownAudit />
-            <D6_DropDownExceptionHandling />
-            <D7_DropDownRest />
-            <D8_DropDownSecurity />
-            <D9_DropDownAop />
-            <D10_DropDownTransactionManagement />
-            <D11_DropDownSpringBatch />
-            <D12_DropDownCaching />
-            <D13_DropDownSpringIO />
-            <D14_DropDownJUnit />
-            <D15_DropDownJenkins />
-            <D16_DropDownInterviewQuestions />
-          </div>
-        </article>
+        <AsideWrapperLayout>
+          <SideBarLink pageName="Spring Home" internalLink="/spring" />
+          <D1_DropDownIDE />
+          <D2_DropDownApplicationProperties />
+          <D3_DropDownLogging />
+          <D4_DropDownJpa />
+          <D5_DropDownAudit />
+          <D6_DropDownExceptionHandling />
+          <D7_DropDownRest />
+          <D8_DropDownSecurity />
+          <D9_DropDownAop />
+          <D10_DropDownTransactionManagement />
+          <D11_DropDownSpringBatch />
+          <D12_DropDownCaching />
+          <D13_DropDownSpringIO />
+          <D14_DropDownJUnit />
+          <D15_DropDownJenkins />
+          <D16_DropDownInterviewQuestions />
+        </AsideWrapperLayout>
       )}
       <main className="css-main-outlet">
         <Outlet />
