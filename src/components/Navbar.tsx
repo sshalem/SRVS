@@ -143,7 +143,7 @@ const Navbar = () => {
 
       {/* End Logo */}
 
-      <nav className="fixed left-0 top-0 z-[3] ml-auto h-[53px] w-full max-w-[1750px] align-middle">
+      <nav className="fixed left-0 top-0 z-[3] ml-auto h-[54px] w-full max-w-[1750px] align-middle">
         {/* left Scroll button */}
 
         {showScrollIcons
