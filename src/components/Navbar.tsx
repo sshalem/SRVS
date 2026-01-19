@@ -80,9 +80,9 @@ const Navbar = () => {
       // console.log(navRef);
       // console.log("");
 
-      console.log(window.innerWidth + " - window innerWidth");
-      console.log(navRef.current?.clientWidth + " - clientWidth");
-      console.log(navRef.current?.scrollWidth + " - scrollWidth");
+      // console.log(window.innerWidth + " - window innerWidth");
+      // console.log(navRef.current?.clientWidth + " - clientWidth");
+      // console.log(navRef.current?.scrollWidth + " - scrollWidth");
 
       // I store in session storage the `showScrollIcons`
       // beacuse , If i go to unkonwn url , I land on the error page
