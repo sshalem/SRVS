@@ -7,7 +7,17 @@ import { Subject } from "../../../../components";
 
 const SpringIO = () => {
   let location = useLocation();
-  return <section>{location.pathname === "/spring/io" ? <Subject title="Spring IO ...">{<div></div>}</Subject> : <Outlet />}</section>;
+  return (
+    <section>
+      {location.pathname === "/spring/io" ? (
+        <Subject title="Spring IO ...">{<div></div>}</Subject>
+      ) : (
+        <main className="css-page-content">
+          <Outlet />
+        </main>
+      )}
+    </section>
+  );
 };
 
 export default SpringIO;

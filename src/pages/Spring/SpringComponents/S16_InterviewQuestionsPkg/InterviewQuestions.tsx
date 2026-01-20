@@ -10,7 +10,13 @@ const InterviewQuestions = () => {
 
   return (
     <section>
-      {location.pathname === "/spring/interview-questions" ? <Subject title="Interview Questions ...">{<div></div>}</Subject> : <Outlet />}
+      {location.pathname === "/spring/interview-questions" ? (
+        <Subject title="Interview Questions ...">{<div></div>}</Subject>
+      ) : (
+        <main className="css-page-content">
+          <Outlet />
+        </main>
+      )}
     </section>
   );
 };

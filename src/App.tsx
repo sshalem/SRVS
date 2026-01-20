@@ -309,6 +309,7 @@ import {
   FastAPISQLAlchemy,
 } from "./pages/FastAPI/FastAPIComponents";
 import { MainPyMain, PydanticMain, SetupFastApiMain } from "./pages/FastAPI/FastAPIComponents/F3_FastAPIRouterPkg";
+import DockerMain from "./pages/DevOps/DevOpsComponents/D_DockerPkg/DockerMain";
 
 const router = createBrowserRouter(
   [
@@ -825,6 +826,7 @@ const router = createBrowserRouter(
             { index: true, element: <DevOpsHome /> },
             { path: "git", element: <GitMain /> },
             { path: "react-on-spring", element: <ReactOnSpringMain /> },
+            { path: "docker", element: <DockerMain /> },
             { path: "netlify", element: <DeployNetlifyMain /> },
             { path: "render", element: <DeployRenderMain /> },
             {

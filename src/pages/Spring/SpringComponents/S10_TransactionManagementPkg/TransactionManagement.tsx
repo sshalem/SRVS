@@ -10,7 +10,13 @@ const TransactionManagement = () => {
 
   return (
     <section>
-      {location.pathname === "/spring/transaction-management" ? <Subject title="Transaction Management  ...">{<div></div>}</Subject> : <Outlet />}
+      {location.pathname === "/spring/transaction-management" ? (
+        <Subject title="Transaction Management  ...">{<div></div>}</Subject>
+      ) : (
+        <main className="css-page-content">
+          <Outlet />
+        </main>
+      )}
     </section>
   );
 };

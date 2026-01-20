@@ -10,11 +10,11 @@ const JavaBasics = () => {
   return (
     <section>
       {location.pathname === "/java/basics" ? (
-        <Subject title="Java Basics ...">
-          <div>my content</div>
-        </Subject>
+        <Subject title="Java Basics ...">{<div></div>}</Subject>
       ) : (
-        <Outlet />
+        <main className="css-page-content">
+          <Outlet />
+        </main>
       )}
     </section>
   );
