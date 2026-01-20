@@ -30,7 +30,7 @@ const ASML_LOGO = () => {
           {showLOGO ? (
             <div className="z-50 mr-0 w-fit cursor-pointer p-1 text-white" onClick={() => navigate("/")}>
               <div className="css-logo-asml"></div>
-              <div className="font- select-none py-[0.1rem] text-xs font-semibold italic">VRSS</div>
+              <div className="font- select-none py-[0.1rem] text-xs font-semibold italic">S-R-V-S</div>
             </div>
           ) : (
             <div className="-z-50 w-14"></div>
