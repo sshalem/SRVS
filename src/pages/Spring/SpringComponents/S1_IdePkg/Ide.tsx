@@ -4,7 +4,7 @@ Ide
 */
 import { Outlet, useLocation } from "react-router-dom";
 import TableIdeCompare from "../../../../components/Tables/TableIdeCompare";
-import { Li, ULdisc } from "../../../../components";
+import { Li, Subject, ULdisc } from "../../../../components";
 
 const Ide = () => {
   let location = useLocation();
@@ -12,23 +12,23 @@ const Ide = () => {
   return (
     <section>
       {location.pathname === "/spring/ide" ? (
-        <section>
-          <div className="bg-blue-500 p-4 font-mono text-4xl font-semibold tracking-wider text-white">ReactJS Interview Questions ...</div>
-          <article className="my-8">
-            <div>Docs/Youtube</div>
-            <ULdisc>
-              <Li>
-                <a href="https://" target="_blank" className="tracking-wider text-blue-600">
-                  https://
-                </a>
-              </Li>
-            </ULdisc>
-            <TableIdeCompare></TableIdeCompare>
-          </article>
-        </section>
+        <Subject title="">{<div>text</div>}</Subject>
       ) : (
+        // <section>
+        //   <div className="bg-blue-500 p-4 font-mono text-4xl font-semibold tracking-wider text-white">ReactJS Interview Questions ...</div>
+        //   <article className="my-8">
+        //     <div>Docs/Youtube</div>
+        //     <ULdisc>
+        //       <Li>
+        //         <a href="https://" target="_blank" className="tracking-wider text-blue-600">
+        //           https://
+        //         </a>
+        //       </Li>
+        //     </ULdisc>
+        //     <TableIdeCompare></TableIdeCompare>
+        //   </article>
+        // </section>
         <p className="text-2xl">
-          SHabtay
           <Outlet />
         </p>
       )}
