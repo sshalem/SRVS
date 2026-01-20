@@ -71,6 +71,7 @@ const Spring_page = () => {
         </AsideWrapperLayout>
       )}
       <main className="css-main-outlet">
+        SHalem
         <Outlet />
       </main>
     </FlexLayout>

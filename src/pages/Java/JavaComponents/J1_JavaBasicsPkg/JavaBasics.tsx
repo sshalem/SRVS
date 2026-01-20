@@ -3,16 +3,16 @@
 
 */
 import { Outlet, useLocation } from "react-router-dom";
+import { Subject } from "../../../../components";
 
 const JavaBasics = () => {
   let location = useLocation();
   return (
     <section>
       {location.pathname === "/java/basics" ? (
-        <section>
-          <div className="bg-blue-500 p-4 font-mono text-4xl font-semibold tracking-wider text-white">Java Basics ...</div>
-          <article className="my-8">text</article>
-        </section>
+        <Subject title="Java Basics ...">
+          <div>my content</div>
+        </Subject>
       ) : (
         <Outlet />
       )}

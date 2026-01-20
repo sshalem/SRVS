@@ -27,7 +27,10 @@ const Ide = () => {
           </article>
         </section>
       ) : (
-        <Outlet />
+        <p className="text-2xl">
+          SHabtay
+          <Outlet />
+        </p>
       )}
     </section>
   );
