@@ -36,7 +36,11 @@
   } */
 
   .css-main-outlet {
-    @apply ml-0 max-h-[850px] w-full min-w-[400px] overflow-auto px-8 sm:ml-0 md:ml-64;
+    @apply ml-0 max-h-[850px] w-full min-w-[400px] overflow-auto sm:ml-0 md:ml-64;
+  }
+
+  .css-page-content {
+    @apply ml-2 w-11/12 min-w-[400px] overflow-auto sm:ml-2 md:ml-10;
   }
 
   .css-ul {
