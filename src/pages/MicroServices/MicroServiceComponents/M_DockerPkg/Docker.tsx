@@ -3,11 +3,7 @@
 
 */
 import { useEffect, useRef, useState } from "react";
-import { ContentMenu, Loading, Subject } from "../../../../components";
-import O1_WhatIsDocker from "./O1_WhatIsDocker";
-import O2_WorkFlow from "./O2_WorkFlow";
-import O4_InstallDocker from "./O4_InstallDocker";
-import O3_InstallWSL2 from "./O3_InstallWSL2";
+import { ContentMenu, Loading } from "../../../../components";
 import { Link } from "react-router-dom";
 
 // ===========================================

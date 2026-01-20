@@ -310,6 +310,7 @@ import {
 } from "./pages/FastAPI/FastAPIComponents";
 import { MainPyMain, PydanticMain, SetupFastApiMain } from "./pages/FastAPI/FastAPIComponents/F3_FastAPIRouterPkg";
 import DockerMain from "./pages/DevOps/DevOpsComponents/D_DockerPkg/DockerMain";
+import PythonDataStructure from "./pages/Python/PythonComponents/P3_DataStructuresPkg/PythonDataStructure";
 
 const router = createBrowserRouter(
   [
@@ -778,7 +779,7 @@ const router = createBrowserRouter(
             },
             {
               path: "data-structure",
-              element: <PythonIde />,
+              element: <PythonDataStructure />,
               children: [
                 { path: "list", element: <PythonListMain /> },
                 { path: "tuple", element: <PythonTupleMain /> },
