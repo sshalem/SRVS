@@ -41,7 +41,7 @@ const anchorList: string[] = [
 // ============================================
 // ============================================
 
-const Setup = () => {
+const SetupMain = () => {
   const [showContent, setShowContent] = useState<boolean>(true);
   const [contentHeight, setContentHeight] = useState<number>();
   const [isLoading, setIsLoading] = useState(true);
@@ -79,7 +79,7 @@ const Setup = () => {
   }
 
   return (
-    <section>
+    <section className="ml-2 md:ml-10">
       {/* Start Contents */}
       <ContentMenu
         anchorList={anchorList}
@@ -101,4 +101,4 @@ const Setup = () => {
   );
 };
 
-export default Setup;
+export default SetupMain;

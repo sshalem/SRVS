@@ -87,7 +87,9 @@ const Router = () => {
           }
         </Subject>
       ) : (
-        <Outlet />
+        <main className="css-page-content">
+          <Outlet />
+        </main>
       )}
     </section>
   );

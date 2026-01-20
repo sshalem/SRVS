@@ -79,7 +79,7 @@ import {
   ReactJSInterviewQuestions,
   ReactRouter,
   RouterMain,
-  Setup,
+  SetupMain,
   TypeScript,
 } from "./pages/ReactJS/ReactJSComponents";
 import { DataStructures, DesignPatternStructural, JavaBasics, JavaHome } from "./pages/Java/JavaComponents";
@@ -563,7 +563,7 @@ const router = createBrowserRouter(
           element: <ReactJS_page />,
           children: [
             { index: true, element: <ReactJSHome /> },
-            { path: "setup", element: <Setup /> },
+            { path: "setup", element: <SetupMain /> },
             {
               path: "basics",
               element: <ReactBasics />,
