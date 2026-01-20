@@ -617,8 +617,8 @@ const router = createBrowserRouter(
           element: <HTML_CSS_page />,
           children: [
             { index: true, element: <HtmlCssHome /> },
-            { path: "css-basics", element: <HtmlBasics />, children: [{ path: "add-css", element: <AddCssMain /> }] },
-            { path: "html-basics", element: <CssBasics />, children: [{ path: "html-types", element: <HtmlTypesMain /> }] },
+            { path: "css-basics", element: <CssBasics />, children: [{ path: "add-css", element: <AddCssMain /> }] },
+            { path: "html-basics", element: <HtmlBasics />, children: [{ path: "html-types", element: <HtmlTypesMain /> }] },
           ],
         },
         { path: "fullstack", element: <FullStack_page />, children: [{ index: true, element: <FullStackHome /> }] },

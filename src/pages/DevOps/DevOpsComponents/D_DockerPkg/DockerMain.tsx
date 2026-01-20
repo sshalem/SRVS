@@ -64,7 +64,7 @@ const DockerMain = () => {
   }
 
   return (
-    <section className="mx-2 md:mx-10">
+    <section className="ml-2 md:ml-10">
       {/* Start Contents */}
       <ContentMenu
         anchorList={anchorList}
